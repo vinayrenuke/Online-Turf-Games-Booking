@@ -36,13 +36,16 @@ logout.php – Session termination
 
 📌 How to Run
 1.Clone the repository:
-git clone https://gi![Uploading Screenshot 2025-05-26 120707.png…]()
+git clone https://gi![Screenshot 2025-05-26 120707](https://github.com/user-attachments/assets/2d57aa1d-4d6d-4dab-b1ad-f7a3f33d5276)
 thub.com/yourusername/online-turf-booking.git
 2.Host the project on a local server (e.g., XAMPP or WAMP).
 3.Place the project folder in the htdocs directory.
 4.Start Apache and MySQL.
 5.Open your browser and go to:
 http://localhost/online-turf-booking/index.php
+
+![Uploading Screenshot 2025-05-26 120707.png…]()
+
 
 
 
