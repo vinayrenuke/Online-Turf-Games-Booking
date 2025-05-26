@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Options</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 2em; /* 4 times bigger */
+      text-decoration: underline;
+    }
+
+    .payment-container {
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .payment-container h2 {
+      margin-top: 0;
+    }
+
+    .payment-options {
+      margin-top: 20px;
+    }
+
+    .payment-options label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .payment-options input[type="radio"]:checked {
+      color: red; /* Changing text color to red when checked */
+    }
+
+    .bank-options, .card-details, .upi-qr {
+      display: none;
+    }
+
+   
+    .upi-qr img {
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="payment-container">
+    <h2>Select a Payment Method</h2>
+
+    <div class="payment-options">
+      <label>
+        <input type="radio" name="paymentMethod" value="cashOnDelivery" id="cashOnDeliveryCheckbox"> Cash on Delivery
+      </label>
+
+      <label>
+        <input type="radio" name="paymentMethod" value="bankPayment" id="bankPaymentCheckbox"> Bank Payment
+      </label>
+      <select class="bank-options" id="bankOptions" disabled>
+        <option value="bank1">Bank 1</option>
+        <option value="bank2">Bank 2</option>
+        <option value="bank3">Bank 3</option>
+        <option value="bank4">Bank 4</option>
+      </select>
+      <div class="card-details" id="cardDetails" disabled>
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber"><br>
+        <label for="cardCvv">CVV:</label>
+        <input type="text" id="cardCvv"><br>
+        <button onclick="completeBankPayment()">Submit</button>
+      </div>
+
+      <label>
+        <input type="radio" name="paymentMethod" value="upiPayment" id="upiPaymentCheckbox"> UPI Payment
+      </label>
+      <div class="upi-qr" id="upiQR">
+        <img src="C:\Users\aniru\OneDrive\Desktop\qr.png" alt="UPI QR Code">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const cashOnDeliveryCheckbox = document.getElementById('cashOnDeliveryCheckbox');
+    const bankPaymentCheckbox = document.getElementById('bankPaymentCheckbox');
+    const bankOptions = document.getElementById('bankOptions');
+    const cardDetails = document.getElementById('cardDetails');
+    const upiQR = document.getElementById('upiQR');
+
+    cashOnDeliveryCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        alert("Order placed!");
+      }
+    });
+
+    bankPaymentCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        bankOptions.disabled = false;
+        cardDetails.style.display = "block";
+        upiQR.style.display = "none";
+      } else {
+        bankOptions.disabled = true;
+        cardDetails.style.display = "none";
+        upiQR.style.display = "none";
+      }
+    });
+
+    function completeBankPayment() {
+      const cardNumber = document.getElementById('cardNumber').value;
+      const cardCvv = document.getElementById('cardCvv').value;
+      if (cardNumber && cardCvv) {
+        alert("Payment successful! Order placed.");
+      } else {
+        alert("Please fill in card details.");
+      }
+    }
+
+    const upiPaymentCheckbox = document.getElementById('upiPaymentCheckbox');
+    upiPaymentCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        upiQR.style.display = "block";
+        bankOptions.disabled = true;
+        cardDetails.style.display = "none";
+      } else {
+        upiQR.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
