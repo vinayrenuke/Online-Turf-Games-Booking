@@ -36,7 +36,7 @@ logout.php – Session termination
 
 📌 How to Run
 1.Clone the repository:
-git clone https://gi![Screenshot 2025-05-26 120707](https://github.com/user-attachments/assets/2d57aa1d-4d6d-4dab-b1ad-f7a3f33d5276)
+git clone https://gi![Screenshot 2025-05-26 120707]
 thub.com/yourusername/online-turf-booking.git
 2.Host the project on a local server (e.g., XAMPP or WAMP).
 3.Place the project folder in the htdocs directory.
@@ -44,8 +44,19 @@ thub.com/yourusername/online-turf-booking.git
 5.Open your browser and go to:
 http://localhost/online-turf-booking/index.php
 
-![Uploading Screenshot 2025-05-26 120707.png…]()
+Login Page:
+![Screenshot 2025-05-26 120707](https://github.com/user-attachments/assets/cca1ea21-5951-4a89-8944-91557ce01096)
 
+Contact Us:
+![Screenshot 2025-05-26 120636](https://github.com/user-attachments/assets/80be755a-96d5-485b-beac-3983c467b8aa)
+
+Booking Details:
+![Screenshot 2025-05-26 120618](https://github.com/user-attachments/assets/75b3940a-0369-4b4c-9e35-03122a11ce2b)
+
+Home Pages:
+![Screenshot 2025-05-26 120555](https://github.com/user-attachments/assets/7aea6994-5f16-417f-bb06-29035d29fe69)![Screenshot 2025-05-26 120451](https://github.com/user-attachments/assets/053715e9-942d-4669-b4b6-13772ec28a64)
+
+![Screenshot 2025-05-26 120424](https://github.com/user-attachments/assets/b1064f92-ca9a-4575-b73d-cc1a3830b58c)
 
 
 
